@@ -94,7 +94,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/news', (req, res) => {
+app.get('/news',checkToken, (req, res) => {
     res.send({
         status: 1,
         message: "This is News API",
